@@ -1,0 +1,9 @@
+{
+	"name": "df-anshproj1",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "edff99b6-ac9d-4d68-b74f-597d8dd814dc",
+		"tenantId": "792a715c-d2bf-4949-a344-c98ea4109510"
+	}
+}
