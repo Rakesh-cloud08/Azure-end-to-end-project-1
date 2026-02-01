@@ -110,7 +110,10 @@
 						"parameters": {
 							"container": "bronze",
 							"file": "cdc.json",
-							"folder": "cdc"
+							"folder": {
+								"value": "@{pipeline().parameters.table}_cdc",
+								"type": "Expression"
+							}
 						}
 					}
 				}
@@ -243,7 +246,10 @@
 									"parameters": {
 										"container": "bronze",
 										"file": "empty.json",
-										"folder": "cdc"
+										"folder": {
+											"value": "@{pipeline().parameters.table}_cdc",
+											"type": "Expression"
+										}
 									}
 								}
 							],
