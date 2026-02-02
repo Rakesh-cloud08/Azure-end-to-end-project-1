@@ -317,6 +317,36 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "alert",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Failed",
+							"Skipped",
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://prod-25.centralindia.logic.azure.com:443/workflows/f59f7fe1b431431cb13b7dd4c9f4e32f/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=suQSRkK8kqTvgk45imM8RyfcjDLPC3WCKjWQgtoJ6TQ",
+					"body": {
+						"value": "{\n    \"pipelien_name\" : \"@{pipeline().pipeline}\",\n    \"pipeline_runID\" : \"@{pipeline().RunId}\"\n}",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
