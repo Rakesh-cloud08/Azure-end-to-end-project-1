@@ -1,4 +1,4 @@
-# ansh-project
+# azure-project
 
 <img width="1468" height="802" alt="image" src="https://github.com/user-attachments/assets/8f86d820-efe6-48a7-bc19-f2bfbade9ff7" />
 
